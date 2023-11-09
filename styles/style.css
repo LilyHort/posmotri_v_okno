@@ -38,6 +38,7 @@ ol {
 }
 
 /* Общие стили */
+
 .visually-hidden {
   position: absolute;
   inline-size: 1px;
@@ -130,8 +131,6 @@ ol {
   box-sizing: border-box;
   font-size: 16px;
   line-height: 22px;
-
-  
 }
 
 .search-form__textfield:active {
@@ -186,7 +185,6 @@ ol {
 
 .search-form__pseudo-checkbox::before {
   content: "";
-
   display: none;
   background-color: #FFF; 
   width: 15px;
@@ -204,8 +202,6 @@ ol {
   text-underline-offset: 5px;
   cursor: pointer;
 }
-
-
 
 /*Детали*/
 
@@ -246,12 +242,9 @@ ol {
   padding: 5px 0;
 }
 
-
 .content__video-card-title {
   margin-bottom: 6px;
- 
 }
-
 
 .content__video-card:active {
   background: #545050;
@@ -306,8 +299,6 @@ ol {
   padding: 6px 73px;
 }
 
-
-
 .title {
   font-family: Oswald;
   font-size: 75px;
@@ -317,27 +308,3 @@ ol {
   margin-bottom: 21px;
   margin-top: 29px;
 }
-
-
-/* error */
-
-.error {
-  background-color: #545050;
-  width: 711px;
-  height: 386px;
-  position: relative;
-}
-
-.error__title {
-  color: #FFF;
-  text-align: center;
-  font-family: Oswald;
-  font-size: 30px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 33px;
-  text-transform: uppercase;
-  position: absolute;
-  top: 177px;
-}
-
