@@ -81,10 +81,13 @@ ol {
   grid-template-columns: 711px 399px;
   gap: 30px;
   align-items: flex-end;
-  margin: 130px auto;
+  margin: 136px auto;
 }
 
 /*Видео*/
+.result {
+  margin-bottom: 25px;
+}
 
 .result__video-container {
   width: 711px;
@@ -112,6 +115,8 @@ ol {
 
 .search-form__fieldset-title {
   font-weight: 400;
+  font-size: 18px;
+  margin-bottom: 5px;
 }
 
 .search-form__textfield {
@@ -123,6 +128,9 @@ ol {
   width: 225px;
   appearance: none;
   box-sizing: border-box;
+  font-size: 16px;
+  line-height: 22px;
+
   
 }
 
@@ -144,7 +152,8 @@ ol {
 .search-form__submit-button {
   color: #fff;
   border: 1px solid #fff;
-  padding: 6px 70px;
+  padding: 6px 72px;
+  font-size: 16px;
   align-self: flex-end;
 }
 
@@ -170,9 +179,9 @@ ol {
   width: 19px;
   height: 19px;
   border: 1px solid #FFF;
-  margin-right: 3px;
+  margin-right: 5px;
   cursor: pointer;
-  position: relative;
+  align-self: center;
 }
 
 .search-form__pseudo-checkbox::before {
@@ -183,9 +192,7 @@ ol {
   width: 15px;
   height: 15px;
   align-items: center;
-  position: absolute;
-  top: 1px;
-  left: 1px;
+  margin: 1px;
 }
 
 .search-form__checkbox:checked +  .search-form__pseudo-checkbox::before {
@@ -221,8 +228,12 @@ ol {
   padding: 3px;
 }
 
-.content__list-item {
-  margin-bottom: 30px;
+.content__list::-webkit-scrollbar {
+  width: 0;
+}
+
+.content__list-item:not(:last-child) {
+  margin-bottom: 36px;
 }
  
 .content__video-card {
@@ -232,7 +243,7 @@ ol {
 
 .content__video-card-description-container {
   flex-grow: 1;
-  padding: 7px;
+  padding: 5px 0;
 }
 
 
@@ -303,7 +314,7 @@ ol {
   font-weight: 700;
   line-height: 70px;
   text-transform: uppercase;
-  margin-bottom: 26px;
+  margin-bottom: 21px;
   margin-top: 29px;
 }
 
