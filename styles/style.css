@@ -62,6 +62,7 @@ ol {
 
 .button:active {
   background-color: #545050;
+  outline: none;
 }
 
 .button:hover {
@@ -70,7 +71,7 @@ ol {
   cursor: pointer;
 }
 
-.button:focus {
+.button:focus-visible {
   outline: solid;
   outline-offset: 1px;
 }
@@ -80,13 +81,17 @@ ol {
 .content {
   display: grid;
   max-width: 1140px;
+  min-height: 558px;
   grid-template-columns: 711px 399px;
   gap: 30px;
-  align-items: flex-end;
   margin: 136px auto;
 }
 
 /*Видео*/
+
+.result {
+  align-self: flex-end;
+}
 
 .result__video-container {
   width: 711px;
@@ -137,17 +142,19 @@ ol {
   font-weight: 400;
 }
 
-.search-form__textfield:active {
-  border: 1px solid #fff;
-  box-sizing: border-box;
-}
-
-.search-form__textfield:focus { 
-  outline: none;
-  border: 1px solid #FFF;
+.search-form__textfield:focus-visible { 
+  outline: 1px solid #FFF;
+  outline-offset: 1px;
   padding: 1px;
   box-sizing: border-box;
 }
+
+.search-form__textfield:active {
+ outline: 1px solid #fff;
+ border-top: none;
+ border-bottom: none;
+}
+
 
 .search-form__submit-button {
   color: #fff;
@@ -200,10 +207,19 @@ ol {
   margin: 1px;
 }
 
-.search-form__checkbox:active,
-.search-form__checkbox:checked +  .search-form__pseudo-checkbox::before {
-  display: inline-block;
+.search-form__pseudo-checkbox:active::before {
+  content: "";
+  display: block;
+  background-color: #FFF; 
+  width: 15px;
+  height: 15px;
+  align-items: center;
+  margin: 1px;
 }
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
+  display: inline-block;
+} 
 
 .search-form__label-text:hover {
   text-decoration: underline;
@@ -211,7 +227,18 @@ ol {
   cursor: pointer;
 }
 
+.search-form__pseudo-checkbox::before:active
+ {
+  display: inline;
+}
+
 /*Детали*/
+
+.content__details {
+  display: grid;
+  grid-auto-rows: 210px 298px;
+  gap: 50px;
+}
 
 .title {
   font-family: 'Oswald', 'Arial', sans-serif;
@@ -228,10 +255,10 @@ ol {
 }
 
 .content__list {
-  max-height: 298px;
   overflow: auto;
   padding: 3px;
   padding-bottom: 0;
+  position: relative;
 }
 
 .content__list::-webkit-scrollbar {
@@ -258,6 +285,9 @@ ol {
 
 .content__card-link:active {
   background: #545050;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration-line: none;
 }
 
 .content__card-link:hover {
@@ -265,7 +295,7 @@ ol {
   text-underline-offset: 5px;
 }
 
-.content__card-link:focus-within {
+.content__card-link:focus-visible {
   display: block;
   outline: solid #fff;
 }
